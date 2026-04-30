@@ -4,10 +4,10 @@
 * ADDS/REMOVES FORM LINE ON BUTTON CLICK
 *
 * Documentation:
-* 
+* README.md
 *
 * Example:
-* 
+* example.cshtml
 *
 * Author: Kamila Ruzickova
 * Date: 2026-04-30
