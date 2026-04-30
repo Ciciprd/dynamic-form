@@ -1,0 +1,121 @@
+@model SCCZAppCore.Areas.MyArea.Models.TblMyModelMasDem
+
+<div class="dynamic-form" data-dynamic-form-line-counter="0">
+    <div class="dynamic-form-lines">
+        <div class="dynamic-form-wrapper">
+            <div>
+                <label
+                    for="[0].@nameof(Model.Abbreviation)"
+                    class="form-label fw-bold"
+                    @Html.DisplayNameFor(x => Model.Abbreviation)
+                </label>
+
+                <input
+                    id="[0].@nameof(Model.Abbreviation)"
+                    name="[0].@nameof(Model.Abbreviation)"
+                    class="form-control"
+                    type="text"
+                    data-val="true"
+                    data-val-length="The field Abbreviation must be a string with a maximum length of 10."
+                    data-val-length-max="10"
+                    data-val-required="The Abbreviation field is required."
+                    maxlength="10" />
+                      
+                <span
+                    class="field-validation-valid text-danger"
+                    data-valmsg-for="[0].@nameof(Model.Abbreviation)"
+                    data-valmsg-replace="true">
+                </span>
+            </div>
+
+            <div>
+                <label
+                    for="[0].@nameof(Model.Name)"
+                    class="form-label fw-bold"
+                    @Html.DisplayNameFor(x => Model.Name)
+                </label>
+
+                <input
+                    id="[0].@nameof(Model.Name)"
+                    name="[0].@nameof(Model.Name)"
+                    class="form-control"
+                    type="text"
+                    data-val="true"
+                    data-val-length="The field Name must be a string with a maximum length of 50."
+                    data-val-length-max="50"
+                    data-val-required="The Name field is required."
+                    maxlength="50" />
+
+                <span
+                    class="field-validation-valid text-danger"
+                    data-valmsg-for="[0].@nameof(Model.Name)"
+                    data-valmsg-replace="true">
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button class="dynamic-form-add-line" type="button" role="button">
+            <i class="bi bi-plus-square"></i>
+        </button>
+    </div>
+
+    <div class="dynamic-form-line-template d-none">
+        <div>
+            <label
+                for="[__index__].@nameof(Model.Abbreviation)"
+                class="form-label fw-bold"
+                @Html.DisplayNameFor(x => Model.Abbreviation)
+            </label>
+
+            <input
+                id="[__index__].@nameof(Model.Abbreviation)"
+                name="[__index__].@nameof(Model.Abbreviation)"
+                class="form-control"
+                type="text"
+                data-val="true"
+                data-val-length="The field Abbreviation must be a string with a maximum length of 10."
+                data-val-length-max="10"
+                data-val-required="The Abbreviation field is required."
+                maxlength="10" />
+                  
+            <span
+                class="field-validation-valid text-danger"
+                data-valmsg-for="[__index__].@nameof(Model.Abbreviation)"
+                data-valmsg-replace="true">
+            </span>
+        </div>
+
+        <div>
+            <label
+                for="[__index__].@nameof(Model.Name)"
+                class="form-label fw-bold"
+                @Html.DisplayNameFor(x => Model.Name)
+            </label>
+
+            <input
+                id="[__index__].@nameof(Model.Name)"
+                name="[__index__].@nameof(Model.Name)"
+                class="form-control"
+                type="text"
+                data-val="true"
+                data-val-length="The field Name must be a string with a maximum length of 50."
+                data-val-length-max="50"
+                data-val-required="The Name field is required."
+                maxlength="50" />
+
+            <span
+                class="field-validation-valid text-danger"
+                data-valmsg-for="[__index__].@nameof(Model.Name)"
+                data-valmsg-replace="true">
+            </span>
+        </div>
+
+        <div>
+            <span class="dynamic-form-close">
+                <i class="bi bi-x"></i>
+            </span>
+        </div>
+    </div>
+</div>
