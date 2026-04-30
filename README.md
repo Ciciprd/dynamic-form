@@ -2,7 +2,7 @@
 
 ## Overview
 
-Dynamic Form is a jQuery component implemented in the _dynamic-form.js_ file. Its purpose is to dynamically add and remove form rows on the client side without requiring a page reload.
+**Dynamic Form** is a jQuery component implemented in the _dynamic-form.js_ file. Its purpose is to **dynamically add and remove form rows** on the client side without requiring a page reload.
 
 This component is designed to:
 
@@ -12,7 +12,7 @@ This component is designed to:
 
 ### Use Cases
 
-The main goal of the component is to allow users to enter a variable number of items in a form when the exact number is not known in advance.
+The main goal of the component is to allow users to enter **a variable number of items in a form** when the exact number is not known in advance.
 
 A typical use case is a **one-to-many** relationship between two entities, for example:
 
@@ -123,15 +123,15 @@ Everything must be defined manually.
 
 | Attribute | Purpose | Note | How to write in code | Result value (example) |
 |-----------|---------|------|----------------------|------------------------|
-| _for_ | Required for full form functionality. | Must match the input _id_. | \[\___index__\_\].@nameof(Model.PropertyName) | \[0\].PropertyName |
-| label text | Required - not generated automatically | It is recommended to use the DisplayNameFor function, otherwise the DisplayName decorator will not be taken into account. | @Html.DisplayNameFor(x =\> Model.PropertyName) | Property Name |
+| _for_ | Required for full form functionality. | Must match the input _id_. | `[__index__].@nameof(Model.PropertyName)` | \[0\].PropertyName |
+| label text | Required - not generated automatically | It is recommended to use the DisplayNameFor function, otherwise the DisplayName decorator will not be taken into account. | `@Html.DisplayNameFor(x => Model.PropertyName)` | Property Name |
 
 #### Input
 
 | Attribute | Purpose | Note | How to write in code | Result value (example) |
 |-----------|---------|------|----------------------|------------------------|
-| _id_ | Required for full form functionality. | Must match the _for_ attribute in the label. | \[\___index__\_\].@nameof(Model.PropertyName) | \[0\].PropertyName |
-| _name_ | Required for model binding. | ASP.NET Core maps values ​​to a collection in the model according to this format. | \[\___index__\_\].@nameof(Model.PropertyName) | \[0\].PropertyName |
+| _id_ | Required for full form functionality. | Must match the _for_ attribute in the label. | `[__index__].@nameof(Model.PropertyName)` | \[0\].PropertyName |
+| _name_ | Required for model binding. | ASP.NET Core maps values ​​to a collection in the model according to this format. | `[__index__].@nameof(Model.PropertyName)` | \[0\].PropertyName |
 | _type_ | Specifies the input type. | If not specified, _text_ is used by default. | According to the property type, see the [documentation](https://www.w3schools.com/html/html_form_input_types.asp) | text |
 | data-val="true" | Activates client-side validation. | The value will always be "true" | true | true |
 | data-val-required | Error message for Required | Displayed when the field value is empty. | This field is required | This field is required |
@@ -149,15 +149,14 @@ This will ensure that the client-side validation will behave exactly the same as
 
 | Attribute | Purpose | How to write in code | Result value (example) |
 |-----------|---------|----------------------|------------------------|
-| data-valmsg-for | Specifies which input the validation message belongs to. | \[\___index__\_\].@nameof(Model.PropertyName) | \[0\].PropertyName |
+| data-valmsg-for | Specifies which input the validation message belongs to. | `[__index__].@nameof(Model.PropertyName)` | \[0\].PropertyName |
 | data-valmsg-replace="true" | On error, replaces the element content with a validation message. | true | true |
-| data-testid | Optional attribute for testing. Follow the internal testing standard. | @nameof(Model.PropertyName)-input-\___index__\_ | PropertyName-input-0 |
 
 #### The use of @nameof
 
 To avoid hardcoding the property name, it is recommended to use:
 
-@nameof(Model.Abbreviation)
+`@nameof(Model.Abbreviation)`
 
 This minimises the risk of error during refactoring.
 
