@@ -23,7 +23,8 @@ $(document).on('click', '.dynamic-form .dynamic-form-add-line', function () {
     lineCounter++;
 
     clone
-        .removeClass('dynamic-form-line-template d-none')
+        .removeClass('dynamic-form-line-template')
+        .show()
         .addClass('dynamic-form-wrapper')
         .find('*').addBack().each(function () {
             for (let i = 0; i < this.attributes.length; i++) {
